@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Алгоритм ЦДА</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Алгоритм ЦДА</h1>
+
+    <form class="controls" id="controls">
+      <label>
+        x1
+        <input type="number" id="x1" value="2" min="0">
+      </label>
+      <label>
+        y1
+        <input type="number" id="y1" value="2" min="0">
+      </label>
+      <label>
+        x2
+        <input type="number" id="x2" value="20" min="0">
+      </label>
+      <label>
+        y2
+        <input type="number" id="y2" value="8" min="0">
+      </label>
+      <button type="submit">Построить</button>
+    </form>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <section class="steps">
+      <h2>Таблица шагов</h2>
+      <div class="table-wrap">
+        <table id="steps-table">
+          <thead>
+            <tr>
+              <th>шаг</th>
+              <th>x до округления</th>
+              <th>y до округления</th>
+              <th>пиксель x</th>
+              <th>пиксель y</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
