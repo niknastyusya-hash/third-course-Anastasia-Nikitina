@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анализатор чисел</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Анализатор чисел</h1>
+
+    <form class="controls" id="controls">
+      <input
+        type="number"
+        id="number-input"
+        placeholder="Введите число"
+        step="any"
+      >
+      <button type="submit" id="add-btn">Добавить</button>
+      <button type="button" id="remove-btn">Удалить последнее</button>
+      <button type="button" id="clear-btn">Очистить</button>
+    </form>
+
+    <p class="error" id="error"></p>
+
+    <section class="values-section">
+      <h2>Числа</h2>
+      <ul class="values-list" id="values-list"></ul>
+    </section>
+
+    <section class="stats-section">
+      <h2>Показатели</h2>
+      <dl class="stats">
+        <dt>Количество</dt>       <dd id="stat-count">0</dd>
+        <dt>Сумма</dt>            <dd id="stat-sum">—</dd>
+        <dt>Среднее</dt>          <dd id="stat-average">—</dd>
+        <dt>Минимум</dt>          <dd id="stat-min">—</dd>
+        <dt>Максимум</dt>         <dd id="stat-max">—</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

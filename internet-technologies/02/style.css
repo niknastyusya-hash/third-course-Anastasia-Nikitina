@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f4f5f7;
+  color: #0d0d0d;
+}
+
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 24px 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: nowrap;    
+  gap: 8px;
+  align-items: stretch;
+}
+
+.controls input {
+  flex: 1 1 auto;      
+  min-width: 0;        
+  padding: 9px 12px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.controls input:focus {
+  border-color: #4d6bfe;
+}
+
+.controls button {
+  flex: 0 0 auto;       
+  padding: 9px 12px;
+  font-size: 13px;     
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;  
+  transition: background 0.15s ease;
+}
+
+#add-btn {
+  background: #4d6bfe;
+  color: #ffffff;
+}
+
+#add-btn:hover {
+  background: #3a56e0;
+}
+
+#remove-btn,
+#clear-btn {
+  background: #eef0f4;
+  color: #0d0d0d;
+}
+
+#remove-btn:hover,
+#clear-btn:hover {
+  background: #e2e5ec;
+}
+
+.error {
+  margin: 12px 0 0;
+  min-height: 20px;
+  font-size: 13px;
+  color: #e53935;
+}
+
+.values-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 32px;
+}
+
+.values-list li {
+  padding: 5px 10px;
+  background: #eef0f4;
+  border-radius: 6px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.values-list:empty::before {
+  content: "Список пуст";
+  color: #999;
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 16px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.stats dt {
+  color: #555;
+}
+
+.stats dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
