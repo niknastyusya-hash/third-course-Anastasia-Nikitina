@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Растеризация окружности: алгоритм средней точки </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Растеризация окружности</h1>
+
+    <form class="controls" id="controls">
+      <label>
+        cx
+        <input type="number" id="cx" value="20" min="0">
+      </label>
+      <label>
+        cy
+        <input type="number" id="cy" value="15" min="0">
+      </label>
+      <label>
+        r
+        <input type="number" id="r" value="8" min="1">
+      </label>
+      <button type="submit">Построить</button>
+      <button type="button" id="clear-btn">Очистить</button>
+    </form>
+
+    <label class="toggle">
+      <input type="checkbox" id="symmetry-toggle">
+      Подсвечивать восемь симметричных точек текущего шага
+    </label>
+
+    <label class="toggle">
+      <input type="checkbox" id="formula-toggle">
+      Сравнивать с формулой y = round(√(r² − x²))
+    </label>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <p class="message" id="message"></p>
+
+    <section class="steps-section">
+      <h2>Таблица шагов</h2>
+      <div class="table-wrap">
+        <table id="steps-table">
+          <thead>
+            <tr>
+              <th>шаг</th>
+              <th>x</th>
+              <th>y</th>
+              <th>d до шага</th>
+              <th>вариант</th>
+              <th>d после шага</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="experiment-section">
+      <h2>Эксперимент</h2>
+      <p class="hint">
+        Строим 1000 окружностей каждым способом и замеряем время.
+      </p>
+      <button type="button" id="experiment-btn">Запустить эксперимент</button>
+      <pre class="experiment-output" id="experiment-output"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
