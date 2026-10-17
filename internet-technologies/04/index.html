@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD-интерфейс для публикаций</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Публикации (CRUD)</h1>
+
+    <section class="form-section">
+      <h2 id="form-title">Новая публикация</h2>
+      <form id="post-form">
+        <div class="field">
+          <label for="post-title">Заголовок</label>
+          <input type="text" id="post-title" required>
+        </div>
+        <div class="field">
+          <label for="post-body">Текст</label>
+          <textarea id="post-body" rows="3" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Сохранить</button>
+          <button type="button" id="cancel-btn" hidden>Отмена</button>
+        </div>
+      </form>
+    </section>
+
+    <hr>
+
+    <section class="controls">
+      <button type="button" id="load-btn">Загрузить публикации</button>
+      <input
+        type="search"
+        id="filter-input"
+        placeholder="Поиск по заголовку или тексту"
+        disabled
+      >
+    </section>
+
+    <p class="status" id="status">Нажмите «Загрузить публикации»</p>
+
+    <section class="posts" id="posts"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

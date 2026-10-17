@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f4f5f7;
+  color: #0d0d0d;
+}
+
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+hr {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.form-section {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #4d6bfe;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.form-actions button {
+  padding: 9px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#submit-btn {
+  background: #4d6bfe;
+  color: #ffffff;
+}
+
+#submit-btn:hover { background: #3a56e0; }
+#submit-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+#cancel-btn {
+  background: #eef0f4;
+  color: #0d0d0d;
+}
+
+#cancel-btn:hover { background: #e2e5ec; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.controls button {
+  padding: 9px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #eef0f4;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.controls button:hover { background: #e2e5ec; }
+.controls button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.controls input {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.controls input:focus { border-color: #4d6bfe; }
+.controls input:disabled { background: #f4f5f7; color: #999; }
+
+.status {
+  margin: 0 0 16px;
+  min-height: 22px;
+  font-size: 14px;
+  color: #555;
+}
+
+.status.is-error { color: #e53935; }
+.status.is-loading { color: #4d6bfe; }
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.post-card {
+  padding: 14px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.post-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.post-id {
+  background: #eef0f4;
+  color: #4d6bfe;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  font-family: ui-monospace, monospace;
+}
+
+.post-card h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 2px;
+}
+
+.post-card p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.post-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.post-actions button {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #eef0f4;
+  color: #0d0d0d;
+}
+
+.edit-btn:hover { background: #e2e5ec; }
+
+.delete-btn {
+  background: #fce4e4;
+  color: #c62828;
+}
+
+.delete-btn:hover { background: #fbd1d1; }
