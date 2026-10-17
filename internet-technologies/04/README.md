@@ -60,25 +60,14 @@ GET-запрос возвращает исходные 10 публикаций.
 
 ## Скриншоты Network
 
-Для сдачи работы открой DevTools → Network, выполни каждое действие
-и сделай скриншоты:
+**GET-запрос (загрузка):**
+![GET запрос](images/network-get.png)
 
-1. **GET:** Нажми «Загрузить публикации». Найди запрос `posts?_limit=10`.
-   - Method: GET
-   - Status: 200 OK
-   - Response: массив из 10 объектов.
+**POST-запрос (создание):**
+![POST запрос](images/network-post.png)
 
-2. **POST:** Заполни форму и нажми «Сохранить». Найди запрос `posts`.
-   - Method: POST
-   - Status: 201 Created
-   - Payload: `{ "title": "...", "body": "...", "userId": 1 }`
+**PATCH-запрос (редактирование):**
+![PATCH запрос](images/network-patch.png)
 
-3. **PATCH:** Нажми «Редактировать» на карточке, измени текст, нажми «Сохранить изменения».
-   Найди запрос `posts/1`.
-   - Method: PATCH
-   - Status: 200 OK
-   - Payload: `{ "title": "...", "body": "..." }`
-
-4. **DELETE:** Нажми «Удалить» на карточке. Найди запрос `posts/1`.
-   - Method: DELETE
-   - Status: 200 OK
+**DELETE-запрос (удаление):**
+![DELETE запрос](images/network-delete.png)
