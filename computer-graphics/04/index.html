@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отсечение Коэна–Сазерленда</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Отсечение отрезков (Коэн–Сазерленд)</h1>
+
+    <div class="controls-grid">
+      <fieldset>
+        <legend>Окно (xmin, ymin, xmax, ymax)</legend>
+        <div class="row">
+          <label>xmin <input type="number" id="xmin" value="10"></label>
+          <label>ymin <input type="number" id="ymin" value="10"></label>
+        </div>
+        <div class="row">
+          <label>xmax <input type="number" id="xmax" value="30"></label>
+          <label>ymax <input type="number" id="ymax" value="20"></label>
+        </div>
+      </fieldset>
+
+      <fieldset id="single-line-fields">
+        <legend>Отрезок (x1, y1, x2, y2)</legend>
+        <div class="row">
+          <label>x1 <input type="number" id="x1" value="2"></label>
+          <label>y1 <input type="number" id="y1" value="5"></label>
+        </div>
+        <div class="row">
+          <label>x2 <input type="number" id="x2" value="36"></label>
+          <label>y2 <input type="number" id="y2" value="22"></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="modes">
+      <label><input type="checkbox" id="polyline-toggle"> Режим ломаной</label>
+    </div>
+
+    <fieldset id="polyline-fields" hidden>
+      <legend>Точки ломаной (каждая с новой строки: x, y)</legend>
+      <textarea id="polyline-input" rows="5">2, 5
+12, 2
+20, 18
+30, 8
+36, 22</textarea>
+    </fieldset>
+
+    <div class="actions">
+      <button id="build-btn">Построить</button>
+      <button id="clear-btn">Очистить</button>
+    </div>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <div class="info-panel" id="info-panel">
+      <p><strong>Исходные коды:</strong></p>
+      <div id="codes-info" class="codes-list"></div>
+      <p id="result-info" class="result"></p>
+    </div>
+
+    <section class="steps-section">
+      <h2>Таблица итераций</h2>
+      <div class="table-wrap">
+        <table id="steps-table">
+          <thead>
+            <tr>
+              <th>Шаг</th>
+              <th>A (x,y)</th>
+              <th>Код A</th>
+              <th>B (x,y)</th>
+              <th>Код B</th>
+              <th>Действие</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="experiment-section">
+      <h2>Эксперимент (100 случайных отрезков)</h2>
+      <button id="experiment-btn">Запустить</button>
+      <p id="experiment-output"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
