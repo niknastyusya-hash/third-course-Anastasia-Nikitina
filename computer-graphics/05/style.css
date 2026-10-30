@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f4f5f7;
+  color: #0d0d0d;
+}
+
+.app {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+}
+
+h1 { margin: 0 0 20px; font-size: 22px; }
+h3 { margin: 0 0 10px; font-size: 16px; }
+
+.controls { display: flex; gap: 16px; margin-bottom: 20px; }
+.panel { flex: 1; padding: 16px; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 8px; }
+.hint { font-size: 13px; color: #666; margin: 0 0 10px; }
+
+button {
+  padding: 8px 12px; font-size: 14px; border: none; border-radius: 6px;
+  background: #4d6bfe; color: #fff; cursor: pointer; margin-bottom: 10px; margin-right: 8px;
+}
+button:hover:not(:disabled) { background: #3a56e0; }
+button:disabled { opacity: 0.5; cursor: not-allowed; background: #ccc; }
+#clear-btn { background: #eef0f4; color: #0d0d0d; }
+#clear-btn:hover { background: #e2e5ec; }
+#compare-btn { background: #2e7d32; margin-bottom: 0; }
+#compare-btn:hover { background: #1b5e20; }
+
+.step-controls { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; font-size: 13px; }
+input[type="range"] { width: 100%; }
+
+canvas {
+  display: block; background: #fff; border: 1px solid #d1d5db;
+  border-radius: 8px; cursor: crosshair; image-rendering: pixelated;
+}
+
+.info-panel { margin-top: 20px; padding: 16px; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 8px; }
+.experiment-output {
+  margin: 10px 0 0; padding: 12px; background: #0d0d0d; color: #e5e5e5;
+  border-radius: 8px; font-family: monospace; font-size: 13px; white-space: pre-wrap;
+}
+.table-wrap { max-height: 200px; overflow: auto; border: 1px solid #e5e5e5; border-radius: 8px; margin-top: 10px; background: #fff; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { padding: 6px 10px; border-bottom: 1px solid #eee; text-align: left; }
+th { background: #eef0f4; position: sticky; top: 0; }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заполнение областей — Занятие 5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Заполнение: Flood Fill и Scanline</h1>
+
+    <div class="controls">
+      <div class="panel">
+        <h3>1. Многоугольник</h3>
+        <p class="hint">Кликайте по сетке, чтобы добавить вершины. Сделайте фигуру невыпуклой.</p>
+        <button id="close-poly-btn" disabled>Замкнуть контур</button>
+        <button id="clear-btn">Очистить всё</button>
+        <p><strong>Вершин:</strong> <span id="vertex-count">0</span></p>
+      </div>
+
+      <div class="panel">
+        <h3>2. Заполнение</h3>
+        <p class="hint">Flood Fill: кликните <b>внутрь</b> контура для старта.</p>
+        <button id="scanline-btn" disabled>Scanline Fill</button>
+        
+        <div class="step-controls" id="step-controls" hidden>
+          <label>Шаг: <input type="range" id="step-slider" min="0" max="0" value="0"></label>
+          <span id="step-label">0 / 0</span>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <section class="info-panel">
+      <h3>Сравнение методов</h3>
+      <button id="compare-btn" disabled>Запустить сравнение</button>
+      <pre id="compare-output" class="experiment-output">Сначала постройте контур.</pre>
+    </section>
+
+    <section class="info-panel">
+      <h3>Таблица Scanline</h3>
+      <p id="scanline-info">Постройте контур и нажмите "Scanline Fill".</p>
+      <div class="table-wrap">
+        <table id="steps-table">
+          <thead>
+            <tr>
+              <th>y</th>
+              <th>Пересечения X</th>
+              <th>Интервалы заполнения</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
