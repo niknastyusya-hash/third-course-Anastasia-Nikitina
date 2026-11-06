@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отсечение многоугольника</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Отсечение многоугольников: алгоритм Сазерленда–Ходжмана</h1>
+
+    <div class="controls-grid">
+      <fieldset>
+        <legend>Окно отсечения (xmin, ymin, xmax, ymax)</legend>
+        <div class="row">
+          <label>xmin <input type="number" id="xmin" value="10"></label>
+          <label>ymin <input type="number" id="ymin" value="8"></label>
+        </div>
+        <div class="row">
+          <label>xmax <input type="number" id="xmax" value="30"></label>
+          <label>ymax <input type="number" id="ymax" value="22"></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Действия</legend>
+        <button id="load-poly-btn">Загрузить тестовый (невыпуклый)</button>
+        <button id="clear-btn">Очистить</button>
+        <p class="hint">Кликайте по сетке, чтобы задать вершины, затем нажмите "Замкнуть контур".</p>
+        <button id="close-poly-btn" disabled>Замкнуть контур</button>
+      </fieldset>
+    </div>
+
+    <div class="step-selector" id="step-selector" hidden>
+      <label>Показ этапа:
+        <select id="step-select">
+          <option value="0">Исходный</option>
+          <option value="1">После LEFT</option>
+          <option value="2">После RIGHT</option>
+          <option value="3">После TOP</option>
+          <option value="4">После BOTTOM</option>
+        </select>
+      </label>
+    </div>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <section class="info-panel">
+      <h2>Промежуточные результаты</h2>
+      <div class="table-wrap">
+        <table id="steps-table">
+          <thead>
+            <tr>
+              <th>Этап</th>
+              <th>Число вершин</th>
+              <th>Координаты (x, y)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
