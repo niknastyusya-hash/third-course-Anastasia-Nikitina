@@ -1,0 +1,89 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f4f5f7;
+  color: #0d0d0d;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+}
+
+h1 { margin: 0 0 20px; font-size: 22px; }
+
+.form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.form button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #4d6bfe;
+  color: #fff;
+  cursor: pointer;
+}
+.form button:disabled { opacity: 0.5; }
+#cancel-btn { background: #eef0f4; color: #0d0d0d; }
+
+.controls { margin-bottom: 16px; }
+.controls button {
+  padding: 8px 12px;
+  background: #eef0f4;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.message { min-height: 20px; color: #e53935; font-size: 14px; }
+.message.success { color: #2e7d32; }
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-item {
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-info strong { display: block; font-size: 15px; }
+.book-info span { font-size: 13px; color: #555; }
+
+.book-actions { display: flex; gap: 8px; }
+.book-actions button {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+.edit-btn { background: #eef0f4; color: #0d0d0d; }
+.delete-btn { background: #fce4e4; color: #c62828; }
+
+.empty-msg { text-align: center; color: #999; padding: 20px; }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Библиотека книг</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Моя библиотека</h1>
+
+    <form id="book-form" class="form">
+      <input type="text" id="title-input" placeholder="Название книги" required>
+      <input type="text" id="author-input" placeholder="Автор" required>
+      <button type="submit" id="submit-btn">Добавить</button>
+      <button type="button" id="cancel-btn" hidden>Отмена</button>
+    </form>
+
+    <div class="controls">
+      <button id="refresh-btn">Обновить список</button>
+    </div>
+
+    <p id="message" class="message"></p>
+
+    <ul id="book-list" class="book-list"></ul>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

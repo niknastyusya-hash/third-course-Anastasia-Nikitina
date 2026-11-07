@@ -1,0 +1,12 @@
+{
+  "name": "books-api-fullstack",
+  "version": "1.0.0",
+  "description": "Fullstack App with Express and SQLite (Lesson 7)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
