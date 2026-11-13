@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редактор геометрических преобразований</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Геометрические преобразования на плоскости</h1>
+
+    <div class="controls-grid">
+      <fieldset>
+        <legend>Параметры преобразований</legend>
+        <div class="row">
+          <label>tx <input type="number" id="tx" value="5" step="0.1"></label>
+          <label>ty <input type="number" id="ty" value="5" step="0.1"></label>
+        </div>
+        <div class="row">
+          <label>sx <input type="number" id="sx" value="1" step="0.1"></label>
+          <label>sy <input type="number" id="sy" value="1" step="0.1"></label>
+        </div>
+        <div class="row">
+          <label>Угол (°) <input type="number" id="angle" value="0" step="1"></label>
+        </div>
+        <div class="row">
+          <label>cx <input type="number" id="cx" value="10" step="0.1"></label>
+          <label>cy <input type="number" id="cy" value="10" step="0.1"></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Порядок операций</legend>
+        <label class="radio-label">
+          <input type="radio" name="order" value="TR" checked>
+          Режим A: Сначала поворот/масштаб, потом перенос (T * R * S)
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="order" value="RT">
+          Режим B: Сначала перенос, потом поворот/масштаб (R * S * T)
+        </label>
+        <p class="hint">Кликайте по сетке, чтобы задать исходный многоугольник.</p>
+        <button id="apply-btn">Применить</button>
+        <button id="reset-btn">Сброс</button>
+        <button id="example-btn" style="background:#2e7d32;">Загрузить пример</button>
+      </fieldset>
+    </div>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <div class="info-panel">
+      <h3>Итоговая матрица (3x3)</h3>
+      <pre id="matrix-output" class="matrix-box">Матрица не применена.</pre>
+    </div>
+
+    <section class="info-panel">
+      <h3>Таблица вершин</h3>
+      <div class="table-wrap">
+        <table id="vertices-table">
+          <thead>
+            <tr>
+              <th>Вершина</th>
+              <th>x исходный</th>
+              <th>y исходный</th>
+              <th>x новый</th>
+              <th>y новый</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
