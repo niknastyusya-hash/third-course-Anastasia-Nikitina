@@ -1,0 +1,45 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px; font-family: system-ui, sans-serif; background: #f4f5f7; color: #0d0d0d; }
+.app { max-width: 700px; margin: 0 auto; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,0.06); }
+h1 { margin: 0 0 20px; font-size: 22px; }
+hr { border: none; border-top: 1px solid #eee; margin: 20px 0; }
+
+.create-form { display: flex; gap: 8px; flex-wrap: wrap; }
+.create-form input { flex: 1 1 120px; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-family: inherit; }
+.create-form button { padding: 8px 16px; border: none; border-radius: 6px; background: #2e7d32; color: #fff; cursor: pointer; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.controls input, .controls select { padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-family: inherit; font-size: 14px; }
+.controls input { flex: 1 1 200px; }
+
+.message { min-height: 20px; color: #e53935; font-size: 14px; margin-bottom: 10px; }
+
+.book-list { list-style: none; padding: 0; margin: 0; }
+.book-item { padding: 12px; border: 1px solid #e5e5e5; border-radius: 8px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.book-info { flex: 1; }
+
+.book-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.book-id { background: #eef0f4; color: #4d6bfe; font-size: 12px; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+.book-header strong { font-size: 16px; }
+
+.badge { font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 600; margin-left: auto; }
+.badge.available { background: #e8f5e9; color: #2e7d32; }
+.badge.unavailable { background: #ffebee; color: #c62828; }
+
+.book-info span { font-size: 13px; color: #555; display: block; }
+
+.book-actions { display: flex; gap: 8px; }
+.book-actions button { padding: 6px 12px; font-size: 13px; border-radius: 6px; cursor: pointer; border: none; }
+.edit-btn { background: #eef0f4; color: #0d0d0d; }
+.delete-btn { background: #fce4e4; color: #c62828; }
+
+.edit-form { display: flex; flex-direction: column; gap: 8px; width: 100%; background: #fafafa; padding: 12px; border-radius: 8px; }
+.edit-form input { padding: 6px 10px; border: 1px solid #d1d5db; border-radius: 6px; }
+.edit-form .actions { display: flex; gap: 8px; margin-top: 4px; }
+.save-btn { background: #4d6bfe; color: #fff; }
+.cancel-btn { background: #eef0f4; color: #0d0d0d; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 20px; }
+.pagination button { padding: 8px 16px; border: none; border-radius: 6px; background: #4d6bfe; color: #fff; cursor: pointer; }
+.pagination button:disabled { background: #ccc; cursor: not-allowed; }
+#page-info { font-size: 14px; font-weight: 600; }

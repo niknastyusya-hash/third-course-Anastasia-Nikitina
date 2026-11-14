@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог с серверным поиском и пагинацией</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Библиотека</h1>
+
+    <form id="create-form" class="create-form">
+      <input type="text" id="new-title" placeholder="Название" required>
+      <input type="text" id="new-author" placeholder="Автор" required>
+      <input type="number" id="new-year" placeholder="Год">
+      <button type="submit">Добавить</button>
+    </form>
+
+    <hr>
+
+    <div class="controls">
+      <input type="text" id="search-input" placeholder="Поиск по названию или автору...">
+      
+      <select id="filter-available">
+        <option value="">Все книги</option>
+        <option value="true">Только доступные</option>
+        <option value="false">Только недоступные</option>
+      </select>
+
+      <select id="sort-select">
+        <option value="id-asc">По ID (возр.)</option>
+        <option value="id-desc">По ID (убыв.)</option>
+        <option value="title-asc">По названию (А-Я)</option>
+        <option value="title-desc">По названию (Я-А)</option>
+        <option value="year-desc">По году (сначала новые)</option>
+        <option value="year-asc">По году (сначала старые)</option>
+      </select>
+
+      <select id="limit-select">
+        <option value="5">5 на стр.</option>
+        <option value="10">10 на стр.</option>
+        <option value="20">20 на стр.</option>
+      </select>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <ul id="book-list" class="book-list"></ul>
+
+    <div class="pagination" id="pagination" hidden>
+      <button id="prev-btn">← Назад</button>
+      <span id="page-info">Стр. 1 из 1</span>
+      <button id="next-btn">Вперёд →</button>
+    </div>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
