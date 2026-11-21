@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Интерактивная 3D-каркасная модель</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Интерактивная 3D-каркасная модель</h1>
+
+  <main>
+    <section class="scene">
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </section>
+
+    <section class="panel">
+      <fieldset>
+        <legend>Модель</legend>
+        <label>Тип модели:
+          <select id="modelSelect">
+            <option value="cube">Куб 2×2×2</option>
+            <option value="box">Параллелепипед 3×1×2</option>
+            <option value="pyramid">Пирамида</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Преобразования</legend>
+        <div class="row"><label>Поворот X: <output id="angleXOut">0°</output></label>
+          <input type="range" id="angleX" min="-360" max="360" step="1" value="0"></div>
+        <div class="row"><label>Поворот Y: <output id="angleYOut">0°</output></label>
+          <input type="range" id="angleY" min="-360" max="360" step="1" value="0"></div>
+        <div class="row"><label>Поворот Z: <output id="angleZOut">0°</output></label>
+          <input type="range" id="angleZ" min="-360" max="360" step="1" value="0"></div>
+        <div class="row"><label>Масштаб: <output id="scaleOut">1.00</output></label>
+          <input type="range" id="scale" min="0.2" max="3" step="0.05" value="1"></div>
+        <div class="row"><label>Расстояние tz: <output id="distOut">5.0</output></label>
+          <input type="range" id="dist" min="1.5" max="15" step="0.1" value="5"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Проекция</legend>
+        <label><input type="radio" name="projection" value="ortho" checked> Ортографическая</label>
+        <label><input type="radio" name="projection" value="persp"> Перспективная</label>
+        <div class="row"><label>Фокус f: <output id="focalOut">300</output></label>
+          <input type="range" id="focal" min="50" max="800" step="10" value="300"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Управление</legend>
+        <button id="playBtn">⏸ Пауза</button>
+        <button id="resetBtn">Сброс</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Выбранная вершина</legend>
+        <label>Индекс:
+          <select id="vertexSelect"></select>
+        </label>
+        <pre id="info"></pre>
+      </fieldset>
+
+      <fieldset>
+        <legend>Матрица модели 4×4 (T · Rz · Ry · Rx · S)</legend>
+        <pre id="matrix"></pre>
+      </fieldset>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
